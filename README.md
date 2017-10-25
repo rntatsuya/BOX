@@ -21,7 +21,7 @@ Another large issue was having the boxes fill in with the correct color when 2 b
 The objective of this 2-player game is to make more boxes than your opponent. 
 The controls are as the following:
 
-### Controls:
+#### Controls:
 
 * btn0 : draw line
 * btn1 : move right
