@@ -13,4 +13,5 @@ switch1 : choose between horizontal and vertical line.
 switch2 : in case of bug, moves the cursor back to the first line. make sure this is off when making the next move.
 switch9 : when on, it resets the game.
 
- 
+
+ <video src="boxGame.mp4" width="320" height="200" controls preload></video>
