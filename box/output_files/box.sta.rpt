@@ -1,0 +1,1205 @@
+TimeQuest Timing Analyzer report for box
+Sun May  8 19:18:15 2016
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                      ;
++--------------------+---------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 177 11/07/2012 SJ Full Version ;
+; Revision Name      ; box                                               ;
+; Device Family      ; Cyclone II                                        ;
+; Device Name        ; EP2C20F484C7                                      ;
+; Timing Models      ; Final                                             ;
+; Delay Model        ; Combined                                          ;
+; Rise/Fall Delays   ; Unavailable                                       ;
++--------------------+---------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
+;     3-12 processors        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 83.56 MHz ; 83.56 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clk   ; -10.967 ; -787.570      ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -199.595              ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                           ;
++---------+------------------------+----------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node              ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------+----------+--------------+-------------+--------------+------------+------------+
+; -10.967 ; VGAdrive:VGA|column[4] ; red[3]   ; clk          ; clk         ; 1.000        ; -0.006     ; 11.999     ;
+; -10.964 ; VGAdrive:VGA|column[4] ; blue[3]  ; clk          ; clk         ; 1.000        ; -0.006     ; 11.996     ;
+; -10.886 ; VGAdrive:VGA|row[2]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.933     ;
+; -10.883 ; VGAdrive:VGA|row[2]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.930     ;
+; -10.868 ; VGAdrive:VGA|column[4] ; red[0]   ; clk          ; clk         ; 1.000        ; -0.006     ; 11.900     ;
+; -10.868 ; VGAdrive:VGA|column[4] ; red[1]   ; clk          ; clk         ; 1.000        ; -0.006     ; 11.900     ;
+; -10.868 ; VGAdrive:VGA|column[4] ; green[2] ; clk          ; clk         ; 1.000        ; -0.006     ; 11.900     ;
+; -10.868 ; VGAdrive:VGA|column[4] ; green[3] ; clk          ; clk         ; 1.000        ; -0.006     ; 11.900     ;
+; -10.837 ; VGAdrive:VGA|column[7] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.003      ; 11.878     ;
+; -10.834 ; VGAdrive:VGA|column[7] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.003      ; 11.875     ;
+; -10.798 ; VGAdrive:VGA|column[5] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.840     ;
+; -10.795 ; VGAdrive:VGA|column[5] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.837     ;
+; -10.768 ; VGAdrive:VGA|row[2]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.815     ;
+; -10.768 ; VGAdrive:VGA|row[2]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.815     ;
+; -10.768 ; VGAdrive:VGA|row[2]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.815     ;
+; -10.768 ; VGAdrive:VGA|row[2]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.815     ;
+; -10.744 ; VGAdrive:VGA|row[5]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.791     ;
+; -10.741 ; VGAdrive:VGA|row[5]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.788     ;
+; -10.719 ; VGAdrive:VGA|column[7] ; red[0]   ; clk          ; clk         ; 1.000        ; 0.003      ; 11.760     ;
+; -10.719 ; VGAdrive:VGA|column[7] ; red[1]   ; clk          ; clk         ; 1.000        ; 0.003      ; 11.760     ;
+; -10.719 ; VGAdrive:VGA|column[7] ; green[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 11.760     ;
+; -10.719 ; VGAdrive:VGA|column[7] ; green[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 11.760     ;
+; -10.719 ; VGAdrive:VGA|row[7]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.766     ;
+; -10.716 ; VGAdrive:VGA|row[7]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.763     ;
+; -10.699 ; VGAdrive:VGA|column[5] ; red[0]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.741     ;
+; -10.699 ; VGAdrive:VGA|column[5] ; red[1]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.741     ;
+; -10.699 ; VGAdrive:VGA|column[5] ; green[2] ; clk          ; clk         ; 1.000        ; 0.004      ; 11.741     ;
+; -10.699 ; VGAdrive:VGA|column[5] ; green[3] ; clk          ; clk         ; 1.000        ; 0.004      ; 11.741     ;
+; -10.695 ; VGAdrive:VGA|row[9]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.742     ;
+; -10.693 ; VGAdrive:VGA|row[6]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.740     ;
+; -10.693 ; VGAdrive:VGA|row[6]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.740     ;
+; -10.693 ; VGAdrive:VGA|row[6]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.740     ;
+; -10.693 ; VGAdrive:VGA|row[6]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.740     ;
+; -10.692 ; VGAdrive:VGA|row[9]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.739     ;
+; -10.684 ; VGAdrive:VGA|column[4] ; red[2]   ; clk          ; clk         ; 1.000        ; -0.006     ; 11.716     ;
+; -10.684 ; VGAdrive:VGA|column[4] ; green[1] ; clk          ; clk         ; 1.000        ; -0.006     ; 11.716     ;
+; -10.684 ; VGAdrive:VGA|column[4] ; blue[0]  ; clk          ; clk         ; 1.000        ; -0.006     ; 11.716     ;
+; -10.684 ; VGAdrive:VGA|column[4] ; blue[1]  ; clk          ; clk         ; 1.000        ; -0.006     ; 11.716     ;
+; -10.684 ; VGAdrive:VGA|column[4] ; blue[2]  ; clk          ; clk         ; 1.000        ; -0.006     ; 11.716     ;
+; -10.676 ; VGAdrive:VGA|row[5]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.723     ;
+; -10.676 ; VGAdrive:VGA|row[5]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.723     ;
+; -10.676 ; VGAdrive:VGA|row[5]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.723     ;
+; -10.676 ; VGAdrive:VGA|row[5]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.723     ;
+; -10.652 ; VGAdrive:VGA|row[3]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.699     ;
+; -10.651 ; VGAdrive:VGA|row[7]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.698     ;
+; -10.651 ; VGAdrive:VGA|row[7]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.698     ;
+; -10.651 ; VGAdrive:VGA|row[7]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.698     ;
+; -10.651 ; VGAdrive:VGA|row[7]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.698     ;
+; -10.649 ; VGAdrive:VGA|row[3]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.696     ;
+; -10.645 ; VGAdrive:VGA|row[6]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.692     ;
+; -10.642 ; VGAdrive:VGA|row[6]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.689     ;
+; -10.627 ; VGAdrive:VGA|row[9]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.674     ;
+; -10.627 ; VGAdrive:VGA|row[9]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.674     ;
+; -10.627 ; VGAdrive:VGA|row[9]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.674     ;
+; -10.627 ; VGAdrive:VGA|row[9]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.674     ;
+; -10.621 ; VGAdrive:VGA|row[4]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.668     ;
+; -10.621 ; VGAdrive:VGA|row[4]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.668     ;
+; -10.621 ; VGAdrive:VGA|row[4]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.668     ;
+; -10.621 ; VGAdrive:VGA|row[4]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.668     ;
+; -10.611 ; VGAdrive:VGA|row[1]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.658     ;
+; -10.608 ; VGAdrive:VGA|row[1]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.655     ;
+; -10.605 ; VGAdrive:VGA|row[8]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.652     ;
+; -10.602 ; VGAdrive:VGA|row[8]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.649     ;
+; -10.596 ; VGAdrive:VGA|column[6] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.638     ;
+; -10.593 ; VGAdrive:VGA|column[6] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.635     ;
+; -10.584 ; VGAdrive:VGA|row[2]    ; red[2]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.631     ;
+; -10.584 ; VGAdrive:VGA|row[2]    ; green[1] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.631     ;
+; -10.584 ; VGAdrive:VGA|row[2]    ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.631     ;
+; -10.584 ; VGAdrive:VGA|row[2]    ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.631     ;
+; -10.584 ; VGAdrive:VGA|row[2]    ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.631     ;
+; -10.556 ; VGAdrive:VGA|row[3]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.603     ;
+; -10.556 ; VGAdrive:VGA|row[3]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.603     ;
+; -10.556 ; VGAdrive:VGA|row[3]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.603     ;
+; -10.556 ; VGAdrive:VGA|row[3]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.603     ;
+; -10.537 ; VGAdrive:VGA|row[8]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.584     ;
+; -10.537 ; VGAdrive:VGA|row[8]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.584     ;
+; -10.537 ; VGAdrive:VGA|row[8]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.584     ;
+; -10.537 ; VGAdrive:VGA|row[8]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.584     ;
+; -10.535 ; VGAdrive:VGA|column[7] ; red[2]   ; clk          ; clk         ; 1.000        ; 0.003      ; 11.576     ;
+; -10.535 ; VGAdrive:VGA|column[7] ; green[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 11.576     ;
+; -10.535 ; VGAdrive:VGA|column[7] ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.003      ; 11.576     ;
+; -10.535 ; VGAdrive:VGA|column[7] ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.003      ; 11.576     ;
+; -10.535 ; VGAdrive:VGA|column[7] ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.003      ; 11.576     ;
+; -10.529 ; VGAdrive:VGA|column[2] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.571     ;
+; -10.526 ; VGAdrive:VGA|column[2] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.568     ;
+; -10.515 ; VGAdrive:VGA|column[5] ; red[2]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.557     ;
+; -10.515 ; VGAdrive:VGA|column[5] ; green[1] ; clk          ; clk         ; 1.000        ; 0.004      ; 11.557     ;
+; -10.515 ; VGAdrive:VGA|column[5] ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.557     ;
+; -10.515 ; VGAdrive:VGA|column[5] ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.557     ;
+; -10.515 ; VGAdrive:VGA|column[5] ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.557     ;
+; -10.512 ; VGAdrive:VGA|column[1] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.554     ;
+; -10.509 ; VGAdrive:VGA|column[1] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.004      ; 11.551     ;
+; -10.509 ; VGAdrive:VGA|row[6]    ; red[2]   ; clk          ; clk         ; 1.000        ; 0.009      ; 11.556     ;
+; -10.509 ; VGAdrive:VGA|row[6]    ; green[1] ; clk          ; clk         ; 1.000        ; 0.009      ; 11.556     ;
+; -10.509 ; VGAdrive:VGA|row[6]    ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.556     ;
+; -10.509 ; VGAdrive:VGA|row[6]    ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.556     ;
+; -10.509 ; VGAdrive:VGA|row[6]    ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.009      ; 11.556     ;
+; -10.497 ; VGAdrive:VGA|column[6] ; red[0]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.539     ;
+; -10.497 ; VGAdrive:VGA|column[6] ; red[1]   ; clk          ; clk         ; 1.000        ; 0.004      ; 11.539     ;
+; -10.497 ; VGAdrive:VGA|column[6] ; green[2] ; clk          ; clk         ; 1.000        ; 0.004      ; 11.539     ;
++---------+------------------------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                  ;
++-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; line18              ; line18              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line37              ; line37              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line38              ; line38              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line14              ; line14              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line33              ; line33              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line32              ; line32              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line10              ; line10              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded10        ; scoreAdded10        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded14        ; scoreAdded14        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line13              ; line13              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line9               ; line9               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line31              ; line31              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line17              ; line17              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line36              ; line36              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded13        ; scoreAdded13        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line39              ; line39              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line20              ; line20              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line40              ; line40              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line16              ; line16              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded16        ; scoreAdded16        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line12              ; line12              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line34              ; line34              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line35              ; line35              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded12        ; scoreAdded12        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line15              ; line15              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line11              ; line11              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line19              ; line19              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded15        ; scoreAdded15        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line28              ; line28              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line27              ; line27              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line2               ; line2               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line22              ; line22              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line23              ; line23              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line6               ; line6               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded2         ; scoreAdded2         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded6         ; scoreAdded6         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line1               ; line1               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line21              ; line21              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line26              ; line26              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line5               ; line5               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded5         ; scoreAdded5         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded1         ; scoreAdded1         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line29              ; line29              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line30              ; line30              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line24              ; line24              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line4               ; line4               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line25              ; line25              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line8               ; line8               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded4         ; scoreAdded4         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded8         ; scoreAdded8         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line7               ; line7               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; line3               ; line3               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded7         ; scoreAdded7         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; scoreAdded3         ; scoreAdded3         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; turn                ; turn                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGAdrive:VGA|row[8] ; VGAdrive:VGA|row[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGAdrive:VGA|row[9] ; VGAdrive:VGA|row[9] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color32             ; color32             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color30             ; color30             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color28             ; color28             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color29             ; color29             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color31             ; color31             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color34             ; color34             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color33             ; color33             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color38             ; color38             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color37             ; color37             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color36             ; color36             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color16             ; color16             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color15             ; color15             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color5              ; color5              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color6              ; color6              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color14             ; color14             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color13             ; color13             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color12             ; color12             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color11             ; color11             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color8              ; color8              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color7              ; color7              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color10             ; color10             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color9              ; color9              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color39             ; color39             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color40             ; color40             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color35             ; color35             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color2              ; color2              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color1              ; color1              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color3              ; color3              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color4              ; color4              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color25             ; color25             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color22             ; color22             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color26             ; color26             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color23             ; color23             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color21             ; color21             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color24             ; color24             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color27             ; color27             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color17             ; color17             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color18             ; color18             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color19             ; color19             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; color20             ; color20             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.633 ; score2[4]           ; score2[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.919      ;
+; 0.644 ; score1[4]           ; score1[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.930      ;
+; 0.896 ; yPos[9]             ; yPos[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.182      ;
++-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|H         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|H         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|V         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|V         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[4] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[4] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[5] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[5] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[6] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[6] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[7] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[7] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[8] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[8] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[9] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[9] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[4]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[4]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[5]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[5]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[6]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[6]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[7]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[7]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[8]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[8]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[9]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[9]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; blue[0]                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; blue[0]                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; blue[1]                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; blue[1]                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; blue[2]                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; blue[2]                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; blue[3]                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; blue[3]                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color1                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color1                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color10                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color10                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color11                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color11                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color12                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color12                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color13                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color13                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color14                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color14                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color15                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color15                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color16                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color16                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color17                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color17                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color18                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color18                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color19                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color19                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color2                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color2                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color20                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color20                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color21                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color21                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color22                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color22                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color23                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color23                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color24                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color24                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color25                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color25                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color26                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color26                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color27                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color27                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color28                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color28                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color29                ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color29                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color3                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; color3                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; color30                ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; btn1           ; clk        ; 8.047 ; 8.047 ; Rise       ; clk             ;
+; btn2           ; clk        ; 8.466 ; 8.466 ; Rise       ; clk             ;
+; btn3           ; clk        ; 8.281 ; 8.281 ; Rise       ; clk             ;
+; btn4           ; clk        ; 7.844 ; 7.844 ; Rise       ; clk             ;
+; goBackSwitch   ; clk        ; 2.857 ; 2.857 ; Rise       ; clk             ;
+; lineDirection1 ; clk        ; 5.882 ; 5.882 ; Rise       ; clk             ;
+; reset          ; clk        ; 2.186 ; 2.186 ; Rise       ; clk             ;
+; updownSwitch   ; clk        ; 2.954 ; 2.954 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; btn1           ; clk        ; -4.744 ; -4.744 ; Rise       ; clk             ;
+; btn2           ; clk        ; -4.541 ; -4.541 ; Rise       ; clk             ;
+; btn3           ; clk        ; -4.516 ; -4.516 ; Rise       ; clk             ;
+; btn4           ; clk        ; -4.796 ; -4.796 ; Rise       ; clk             ;
+; goBackSwitch   ; clk        ; -0.078 ; -0.078 ; Rise       ; clk             ;
+; lineDirection1 ; clk        ; -1.419 ; -1.419 ; Rise       ; clk             ;
+; reset          ; clk        ; -0.346 ; -0.346 ; Rise       ; clk             ;
+; updownSwitch   ; clk        ; -0.732 ; -0.732 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; b[*]      ; clk        ; 8.199 ; 8.199 ; Rise       ; clk             ;
+;  b[0]     ; clk        ; 8.199 ; 8.199 ; Rise       ; clk             ;
+;  b[1]     ; clk        ; 7.635 ; 7.635 ; Rise       ; clk             ;
+;  b[2]     ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  b[3]     ; clk        ; 7.854 ; 7.854 ; Rise       ; clk             ;
+; g[*]      ; clk        ; 8.232 ; 8.232 ; Rise       ; clk             ;
+;  g[1]     ; clk        ; 7.907 ; 7.907 ; Rise       ; clk             ;
+;  g[2]     ; clk        ; 7.908 ; 7.908 ; Rise       ; clk             ;
+;  g[3]     ; clk        ; 8.232 ; 8.232 ; Rise       ; clk             ;
+; hsync     ; clk        ; 7.966 ; 7.966 ; Rise       ; clk             ;
+; r[*]      ; clk        ; 8.658 ; 8.658 ; Rise       ; clk             ;
+;  r[0]     ; clk        ; 8.231 ; 8.231 ; Rise       ; clk             ;
+;  r[1]     ; clk        ; 8.658 ; 8.658 ; Rise       ; clk             ;
+;  r[2]     ; clk        ; 8.500 ; 8.500 ; Rise       ; clk             ;
+;  r[3]     ; clk        ; 8.469 ; 8.469 ; Rise       ; clk             ;
+; vsync     ; clk        ; 7.543 ; 7.543 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; b[*]      ; clk        ; 7.635 ; 7.635 ; Rise       ; clk             ;
+;  b[0]     ; clk        ; 8.199 ; 8.199 ; Rise       ; clk             ;
+;  b[1]     ; clk        ; 7.635 ; 7.635 ; Rise       ; clk             ;
+;  b[2]     ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  b[3]     ; clk        ; 7.854 ; 7.854 ; Rise       ; clk             ;
+; g[*]      ; clk        ; 7.907 ; 7.907 ; Rise       ; clk             ;
+;  g[1]     ; clk        ; 7.907 ; 7.907 ; Rise       ; clk             ;
+;  g[2]     ; clk        ; 7.908 ; 7.908 ; Rise       ; clk             ;
+;  g[3]     ; clk        ; 8.232 ; 8.232 ; Rise       ; clk             ;
+; hsync     ; clk        ; 7.966 ; 7.966 ; Rise       ; clk             ;
+; r[*]      ; clk        ; 8.231 ; 8.231 ; Rise       ; clk             ;
+;  r[0]     ; clk        ; 8.231 ; 8.231 ; Rise       ; clk             ;
+;  r[1]     ; clk        ; 8.658 ; 8.658 ; Rise       ; clk             ;
+;  r[2]     ; clk        ; 8.500 ; 8.500 ; Rise       ; clk             ;
+;  r[3]     ; clk        ; 8.469 ; 8.469 ; Rise       ; clk             ;
+; vsync     ; clk        ; 7.543 ; 7.543 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.463 ; -208.805      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -163.380              ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                          ;
++--------+------------------------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node              ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------+----------+--------------+-------------+--------------+------------+------------+
+; -3.463 ; VGAdrive:VGA|column[4] ; red[0]   ; clk          ; clk         ; 1.000        ; -0.005     ; 4.490      ;
+; -3.463 ; VGAdrive:VGA|column[4] ; red[1]   ; clk          ; clk         ; 1.000        ; -0.005     ; 4.490      ;
+; -3.463 ; VGAdrive:VGA|column[4] ; green[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.490      ;
+; -3.463 ; VGAdrive:VGA|column[4] ; green[3] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.490      ;
+; -3.409 ; VGAdrive:VGA|row[5]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.449      ;
+; -3.409 ; VGAdrive:VGA|row[5]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.449      ;
+; -3.409 ; VGAdrive:VGA|row[5]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.449      ;
+; -3.409 ; VGAdrive:VGA|row[5]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.449      ;
+; -3.389 ; VGAdrive:VGA|column[5] ; red[0]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.424      ;
+; -3.389 ; VGAdrive:VGA|column[5] ; red[1]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.424      ;
+; -3.389 ; VGAdrive:VGA|column[5] ; green[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.424      ;
+; -3.389 ; VGAdrive:VGA|column[5] ; green[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.424      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; red[2]   ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; red[3]   ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; green[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; blue[0]  ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; blue[1]  ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; blue[2]  ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.386 ; VGAdrive:VGA|column[4] ; blue[3]  ; clk          ; clk         ; 1.000        ; -0.005     ; 4.413      ;
+; -3.381 ; VGAdrive:VGA|row[6]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[6]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[6]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[6]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[9]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[9]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[9]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.381 ; VGAdrive:VGA|row[9]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.421      ;
+; -3.376 ; VGAdrive:VGA|row[7]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.416      ;
+; -3.376 ; VGAdrive:VGA|row[7]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.416      ;
+; -3.376 ; VGAdrive:VGA|row[7]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.416      ;
+; -3.376 ; VGAdrive:VGA|row[7]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.416      ;
+; -3.361 ; VGAdrive:VGA|column[7] ; red[0]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.396      ;
+; -3.361 ; VGAdrive:VGA|column[7] ; red[1]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.396      ;
+; -3.361 ; VGAdrive:VGA|column[7] ; green[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.396      ;
+; -3.361 ; VGAdrive:VGA|column[7] ; green[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.396      ;
+; -3.353 ; VGAdrive:VGA|row[4]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.393      ;
+; -3.353 ; VGAdrive:VGA|row[4]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.393      ;
+; -3.353 ; VGAdrive:VGA|row[4]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.393      ;
+; -3.353 ; VGAdrive:VGA|row[4]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.393      ;
+; -3.346 ; VGAdrive:VGA|row[2]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.386      ;
+; -3.346 ; VGAdrive:VGA|row[2]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.386      ;
+; -3.346 ; VGAdrive:VGA|row[2]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.386      ;
+; -3.346 ; VGAdrive:VGA|row[2]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.386      ;
+; -3.335 ; VGAdrive:VGA|row[8]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.375      ;
+; -3.335 ; VGAdrive:VGA|row[8]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.375      ;
+; -3.335 ; VGAdrive:VGA|row[8]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.375      ;
+; -3.335 ; VGAdrive:VGA|row[8]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.375      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; red[2]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; green[1] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.332 ; VGAdrive:VGA|row[5]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.372      ;
+; -3.326 ; VGAdrive:VGA|column[6] ; red[0]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.361      ;
+; -3.326 ; VGAdrive:VGA|column[6] ; red[1]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.361      ;
+; -3.326 ; VGAdrive:VGA|column[6] ; green[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.361      ;
+; -3.326 ; VGAdrive:VGA|column[6] ; green[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.361      ;
+; -3.325 ; VGAdrive:VGA|row[3]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.365      ;
+; -3.325 ; VGAdrive:VGA|row[3]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.365      ;
+; -3.325 ; VGAdrive:VGA|row[3]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.365      ;
+; -3.325 ; VGAdrive:VGA|row[3]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.365      ;
+; -3.312 ; VGAdrive:VGA|row[1]    ; red[0]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.352      ;
+; -3.312 ; VGAdrive:VGA|row[1]    ; red[1]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.352      ;
+; -3.312 ; VGAdrive:VGA|row[1]    ; green[2] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.352      ;
+; -3.312 ; VGAdrive:VGA|row[1]    ; green[3] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.352      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; red[2]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; green[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.312 ; VGAdrive:VGA|column[5] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.003      ; 4.347      ;
+; -3.305 ; VGAdrive:VGA|column[7] ; red[3]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.340      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; red[2]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; green[1] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[6]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; red[2]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; green[1] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.304 ; VGAdrive:VGA|row[9]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.344      ;
+; -3.303 ; VGAdrive:VGA|column[7] ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.003      ; 4.338      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; red[2]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; green[1] ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; blue[0]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; blue[1]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; blue[2]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.299 ; VGAdrive:VGA|row[7]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.339      ;
+; -3.290 ; VGAdrive:VGA|row[2]    ; red[3]   ; clk          ; clk         ; 1.000        ; 0.008      ; 4.330      ;
+; -3.288 ; VGAdrive:VGA|row[2]    ; blue[3]  ; clk          ; clk         ; 1.000        ; 0.008      ; 4.328      ;
+; -3.284 ; VGAdrive:VGA|column[7] ; red[2]   ; clk          ; clk         ; 1.000        ; 0.003      ; 4.319      ;
+; -3.284 ; VGAdrive:VGA|column[7] ; green[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 4.319      ;
++--------+------------------------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                  ;
++-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; line18              ; line18              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line37              ; line37              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line38              ; line38              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line14              ; line14              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line33              ; line33              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line32              ; line32              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line10              ; line10              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded10        ; scoreAdded10        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded14        ; scoreAdded14        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line13              ; line13              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line9               ; line9               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line31              ; line31              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line17              ; line17              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line36              ; line36              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded13        ; scoreAdded13        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line39              ; line39              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line20              ; line20              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line40              ; line40              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line16              ; line16              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded16        ; scoreAdded16        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line12              ; line12              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line34              ; line34              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line35              ; line35              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded12        ; scoreAdded12        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line15              ; line15              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line11              ; line11              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line19              ; line19              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded15        ; scoreAdded15        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line28              ; line28              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line27              ; line27              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line2               ; line2               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line22              ; line22              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line23              ; line23              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line6               ; line6               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded2         ; scoreAdded2         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded6         ; scoreAdded6         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line1               ; line1               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line21              ; line21              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line26              ; line26              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line5               ; line5               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded5         ; scoreAdded5         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded1         ; scoreAdded1         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line29              ; line29              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line30              ; line30              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line24              ; line24              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line4               ; line4               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line25              ; line25              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line8               ; line8               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded4         ; scoreAdded4         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded8         ; scoreAdded8         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line7               ; line7               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; line3               ; line3               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded7         ; scoreAdded7         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; scoreAdded3         ; scoreAdded3         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; turn                ; turn                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGAdrive:VGA|row[8] ; VGAdrive:VGA|row[8] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGAdrive:VGA|row[9] ; VGAdrive:VGA|row[9] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color32             ; color32             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color30             ; color30             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color28             ; color28             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color29             ; color29             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color31             ; color31             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color34             ; color34             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color33             ; color33             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color38             ; color38             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color37             ; color37             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color36             ; color36             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color16             ; color16             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color15             ; color15             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color5              ; color5              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color6              ; color6              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color14             ; color14             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color13             ; color13             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color12             ; color12             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color11             ; color11             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color8              ; color8              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color7              ; color7              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color10             ; color10             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color9              ; color9              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color39             ; color39             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color40             ; color40             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color35             ; color35             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color2              ; color2              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color1              ; color1              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color3              ; color3              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color4              ; color4              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color25             ; color25             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color22             ; color22             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color26             ; color26             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color23             ; color23             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color21             ; color21             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color24             ; color24             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color27             ; color27             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color17             ; color17             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color18             ; color18             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color19             ; color19             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; color20             ; color20             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.245 ; score2[4]           ; score2[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.252 ; score1[4]           ; score1[4]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
+; 0.344 ; yPos[9]             ; yPos[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.496      ;
++-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|H         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|H         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|V         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|V         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|column[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|column[9] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; VGAdrive:VGA|row[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; VGAdrive:VGA|row[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; blue[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; blue[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; blue[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; blue[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; blue[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; blue[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; blue[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; blue[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color1                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color1                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color10                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color10                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color11                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color11                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color12                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color12                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color13                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color13                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color14                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color14                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color15                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color15                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color16                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color16                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color17                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color17                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color18                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color18                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color19                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color19                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color2                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color2                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color20                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color20                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color21                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color21                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color22                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color22                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color23                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color23                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color24                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color24                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color25                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color25                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color26                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color26                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color27                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color27                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color28                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color28                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color29                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color29                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color3                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; color3                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; color30                ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; btn1           ; clk        ; 3.486 ; 3.486 ; Rise       ; clk             ;
+; btn2           ; clk        ; 3.622 ; 3.622 ; Rise       ; clk             ;
+; btn3           ; clk        ; 3.543 ; 3.543 ; Rise       ; clk             ;
+; btn4           ; clk        ; 3.421 ; 3.421 ; Rise       ; clk             ;
+; goBackSwitch   ; clk        ; 0.717 ; 0.717 ; Rise       ; clk             ;
+; lineDirection1 ; clk        ; 1.771 ; 1.771 ; Rise       ; clk             ;
+; reset          ; clk        ; 0.445 ; 0.445 ; Rise       ; clk             ;
+; updownSwitch   ; clk        ; 0.723 ; 0.723 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; btn1           ; clk        ; -2.190 ; -2.190 ; Rise       ; clk             ;
+; btn2           ; clk        ; -2.090 ; -2.090 ; Rise       ; clk             ;
+; btn3           ; clk        ; -2.076 ; -2.076 ; Rise       ; clk             ;
+; btn4           ; clk        ; -2.228 ; -2.228 ; Rise       ; clk             ;
+; goBackSwitch   ; clk        ; 0.462  ; 0.462  ; Rise       ; clk             ;
+; lineDirection1 ; clk        ; -0.069 ; -0.069 ; Rise       ; clk             ;
+; reset          ; clk        ; 0.276  ; 0.276  ; Rise       ; clk             ;
+; updownSwitch   ; clk        ; 0.224  ; 0.224  ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; b[*]      ; clk        ; 4.294 ; 4.294 ; Rise       ; clk             ;
+;  b[0]     ; clk        ; 4.294 ; 4.294 ; Rise       ; clk             ;
+;  b[1]     ; clk        ; 4.079 ; 4.079 ; Rise       ; clk             ;
+;  b[2]     ; clk        ; 4.171 ; 4.171 ; Rise       ; clk             ;
+;  b[3]     ; clk        ; 4.136 ; 4.136 ; Rise       ; clk             ;
+; g[*]      ; clk        ; 4.316 ; 4.316 ; Rise       ; clk             ;
+;  g[1]     ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+;  g[2]     ; clk        ; 4.186 ; 4.186 ; Rise       ; clk             ;
+;  g[3]     ; clk        ; 4.316 ; 4.316 ; Rise       ; clk             ;
+; hsync     ; clk        ; 4.224 ; 4.224 ; Rise       ; clk             ;
+; r[*]      ; clk        ; 4.507 ; 4.507 ; Rise       ; clk             ;
+;  r[0]     ; clk        ; 4.308 ; 4.308 ; Rise       ; clk             ;
+;  r[1]     ; clk        ; 4.507 ; 4.507 ; Rise       ; clk             ;
+;  r[2]     ; clk        ; 4.412 ; 4.412 ; Rise       ; clk             ;
+;  r[3]     ; clk        ; 4.383 ; 4.383 ; Rise       ; clk             ;
+; vsync     ; clk        ; 4.014 ; 4.014 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; b[*]      ; clk        ; 4.079 ; 4.079 ; Rise       ; clk             ;
+;  b[0]     ; clk        ; 4.294 ; 4.294 ; Rise       ; clk             ;
+;  b[1]     ; clk        ; 4.079 ; 4.079 ; Rise       ; clk             ;
+;  b[2]     ; clk        ; 4.171 ; 4.171 ; Rise       ; clk             ;
+;  b[3]     ; clk        ; 4.136 ; 4.136 ; Rise       ; clk             ;
+; g[*]      ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+;  g[1]     ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+;  g[2]     ; clk        ; 4.186 ; 4.186 ; Rise       ; clk             ;
+;  g[3]     ; clk        ; 4.316 ; 4.316 ; Rise       ; clk             ;
+; hsync     ; clk        ; 4.224 ; 4.224 ; Rise       ; clk             ;
+; r[*]      ; clk        ; 4.308 ; 4.308 ; Rise       ; clk             ;
+;  r[0]     ; clk        ; 4.308 ; 4.308 ; Rise       ; clk             ;
+;  r[1]     ; clk        ; 4.507 ; 4.507 ; Rise       ; clk             ;
+;  r[2]     ; clk        ; 4.412 ; 4.412 ; Rise       ; clk             ;
+;  r[3]     ; clk        ; 4.383 ; 4.383 ; Rise       ; clk             ;
+; vsync     ; clk        ; 4.014 ; 4.014 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -10.967  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -10.967  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -787.57  ; 0.0   ; 0.0      ; 0.0     ; -199.595            ;
+;  clk             ; -787.570 ; 0.000 ; N/A      ; N/A     ; -199.595            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; btn1           ; clk        ; 8.047 ; 8.047 ; Rise       ; clk             ;
+; btn2           ; clk        ; 8.466 ; 8.466 ; Rise       ; clk             ;
+; btn3           ; clk        ; 8.281 ; 8.281 ; Rise       ; clk             ;
+; btn4           ; clk        ; 7.844 ; 7.844 ; Rise       ; clk             ;
+; goBackSwitch   ; clk        ; 2.857 ; 2.857 ; Rise       ; clk             ;
+; lineDirection1 ; clk        ; 5.882 ; 5.882 ; Rise       ; clk             ;
+; reset          ; clk        ; 2.186 ; 2.186 ; Rise       ; clk             ;
+; updownSwitch   ; clk        ; 2.954 ; 2.954 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; btn1           ; clk        ; -2.190 ; -2.190 ; Rise       ; clk             ;
+; btn2           ; clk        ; -2.090 ; -2.090 ; Rise       ; clk             ;
+; btn3           ; clk        ; -2.076 ; -2.076 ; Rise       ; clk             ;
+; btn4           ; clk        ; -2.228 ; -2.228 ; Rise       ; clk             ;
+; goBackSwitch   ; clk        ; 0.462  ; 0.462  ; Rise       ; clk             ;
+; lineDirection1 ; clk        ; -0.069 ; -0.069 ; Rise       ; clk             ;
+; reset          ; clk        ; 0.276  ; 0.276  ; Rise       ; clk             ;
+; updownSwitch   ; clk        ; 0.224  ; 0.224  ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; b[*]      ; clk        ; 8.199 ; 8.199 ; Rise       ; clk             ;
+;  b[0]     ; clk        ; 8.199 ; 8.199 ; Rise       ; clk             ;
+;  b[1]     ; clk        ; 7.635 ; 7.635 ; Rise       ; clk             ;
+;  b[2]     ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  b[3]     ; clk        ; 7.854 ; 7.854 ; Rise       ; clk             ;
+; g[*]      ; clk        ; 8.232 ; 8.232 ; Rise       ; clk             ;
+;  g[1]     ; clk        ; 7.907 ; 7.907 ; Rise       ; clk             ;
+;  g[2]     ; clk        ; 7.908 ; 7.908 ; Rise       ; clk             ;
+;  g[3]     ; clk        ; 8.232 ; 8.232 ; Rise       ; clk             ;
+; hsync     ; clk        ; 7.966 ; 7.966 ; Rise       ; clk             ;
+; r[*]      ; clk        ; 8.658 ; 8.658 ; Rise       ; clk             ;
+;  r[0]     ; clk        ; 8.231 ; 8.231 ; Rise       ; clk             ;
+;  r[1]     ; clk        ; 8.658 ; 8.658 ; Rise       ; clk             ;
+;  r[2]     ; clk        ; 8.500 ; 8.500 ; Rise       ; clk             ;
+;  r[3]     ; clk        ; 8.469 ; 8.469 ; Rise       ; clk             ;
+; vsync     ; clk        ; 7.543 ; 7.543 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; b[*]      ; clk        ; 4.079 ; 4.079 ; Rise       ; clk             ;
+;  b[0]     ; clk        ; 4.294 ; 4.294 ; Rise       ; clk             ;
+;  b[1]     ; clk        ; 4.079 ; 4.079 ; Rise       ; clk             ;
+;  b[2]     ; clk        ; 4.171 ; 4.171 ; Rise       ; clk             ;
+;  b[3]     ; clk        ; 4.136 ; 4.136 ; Rise       ; clk             ;
+; g[*]      ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+;  g[1]     ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+;  g[2]     ; clk        ; 4.186 ; 4.186 ; Rise       ; clk             ;
+;  g[3]     ; clk        ; 4.316 ; 4.316 ; Rise       ; clk             ;
+; hsync     ; clk        ; 4.224 ; 4.224 ; Rise       ; clk             ;
+; r[*]      ; clk        ; 4.308 ; 4.308 ; Rise       ; clk             ;
+;  r[0]     ; clk        ; 4.308 ; 4.308 ; Rise       ; clk             ;
+;  r[1]     ; clk        ; 4.507 ; 4.507 ; Rise       ; clk             ;
+;  r[2]     ; clk        ; 4.412 ; 4.412 ; Rise       ; clk             ;
+;  r[3]     ; clk        ; 4.383 ; 4.383 ; Rise       ; clk             ;
+; vsync     ; clk        ; 4.014 ; 4.014 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 325191   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 325191   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 407   ; 407  ;
+; Unconstrained Output Ports      ; 35    ; 35   ;
+; Unconstrained Output Port Paths ; 35    ; 35   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
+    Info: Processing started: Sun May  8 19:18:11 2016
+Info: Command: quartus_sta box -c box
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 22 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'box.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -10.967
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -10.967      -787.570 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631      -199.595 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.463
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.463      -208.805 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -163.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 315 megabytes
+    Info: Processing ended: Sun May  8 19:18:15 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+
