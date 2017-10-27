@@ -11,7 +11,10 @@ The end result had me working with over 1600 lines of code, 100+ boolean signals
 
 #### Issues:
 
-While creating the movement for the indicator-line, I was unable to properly bind one press of the corresponding button to a 1 unit shift. This was because of the speed of the clock. In other words, when trying to switch the indicator-line position over just one space, the indicator-line would go to the end of the grid (instead of just shifting 1 unit). [This](https://stackoverflow.com/questions/14493625/vhdl-incrementing-register-value-on-push-button-event) post saved my life because it solved the problem (allowed me to properly increment the clock, which allowed the pushbuttons to actually be read by the program). I also used a debouncer to try and solve this problem, although the script for incrementing was ultimately more useful.
+While creating the movement for the indicator-line, I was unable to properly bind one press of the corresponding button to a 1 unit shift. This was because of the speed of the clock. In other words, when trying to switch the indicator-line position over just one space, the indicator-line would go to the end of the grid (instead of just shifting 1 unit). [This](https://stackoverflow.com/questions/14493625/vhdl-incrementing-register-value-on-push-button-event) 
+
+<a href="https://stackoverflow.com/questions/14493625/vhdl-incrementing-register-value-on-push-button-event" target="_blank">New Tab</a>
+post saved my life because it solved the problem (allowed me to properly increment the clock, which allowed the pushbuttons to actually be read by the program). I also used a debouncer to try and solve this problem, although the script for incrementing was ultimately more useful.
 
 Another large issue was having the boxes fill in with the correct color when 2 boxed were finished in one turn. Instead of the boxes being one color (the color that corresponded to the player that completed the boxes), they would come out in both colors and change the next line at random. I kept trying to fix the issue but at one point we ended up having the filled in boxes change colors.... If this happens, then you can turn to your opponent and say "Just kidding! This isn't the Box Game.. It's Box Drawing with Friend."
 
