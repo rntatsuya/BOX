@@ -33,5 +33,5 @@ The controls are as the following:
 * switch2 : in case of bug, moves the cursor back to the first line. make sure this is off when making the next move.
 * switch9 : when on, it resets the game.
 
-Here's a [video](https://github.com/rntatsuya/BOX/raw/master/boxGame.mp4) of me explaining the basic controls and the rules for the game. 
+Here's a [video](https://github.com/rntatsuya/BOX/raw/master/boxGame.mp4) of me giving a simple demo of the game. 
 
